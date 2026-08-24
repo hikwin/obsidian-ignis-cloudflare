@@ -141,6 +141,18 @@ python download_assets.py --cli --build-ignis --no-obsidian
 
 ---
 
+## 🔒 数据安全与隐私合规建议
+
+> [!IMPORTANT]
+> **关于数据隐私的重要提示**：
+> 1. **明文笔记特性**：Obsidian 的核心设计在于采用纯文本 Markdown 格式管理数据。在云端环境中，笔记与附件会以原始文件形式保存在 Cloudflare R2 对象存储桶中。
+> 2. **公网访问防范**：通过 Cloudflare Worker 部署后，应用具备公网可访问性。请务必牢记以下安全防护建议：
+>    - **强化密码与密钥**：部署时务必配置高强度访问密码（`ADMIN_PASSWORD`）与随机的 `JWT_SECRET`（建议通过 Cloudflare Secrets 安全注入，切勿提交至公开代码库）。
+>    - **保护访问地址与仓库名**：避免在公开平台或社交网络泄露您的 Worker 访问域名、自定义二级域名或 笔记 Vaults 名称。
+>    - **妥善隔离高敏感隐私**：请审慎斟酌云端存储内容，**切勿在云端明文笔记中存放银行密码、私钥、助记词、身份证件等极端高敏感个人资产信息**。
+
+---
+
 <br><br>
 
 # 🇺🇸 English Documentation
@@ -257,3 +269,15 @@ python download_assets.py --cli --build-ignis --ignis-tag v0.8.10+obsidian.1.12.
 # 4. Compile Ignis only, skip Obsidian core
 python download_assets.py --cli --build-ignis --no-obsidian
 ```
+
+---
+
+## 🔒 Data Security & Privacy Guidelines
+
+> [!IMPORTANT]
+> **Key Privacy & Security Best Practices**:
+> 1. **Plaintext Markdown Storage**: Obsidian notes and attachments are stored as native, plaintext Markdown files within your Cloudflare R2 bucket.
+> 2. **Public Web Protection**: Because Cloudflare Workers run over public web endpoints, please follow these essential security guidelines:
+>    - **Enforce Strong Credentials**: Always set a complex `ADMIN_PASSWORD` and a random `JWT_SECRET` (configured securely via Cloudflare Secrets, never committed in plaintext).
+>    - **Keep URLs & Vault Names Private**: Do not disclose your Worker URL, custom domain, or Vault name on public forums or repositories.
+>    - **Segregate Highly Sensitive Data**: Avoid storing unencrypted high-risk personal credentials (e.g., bank passwords, seed phrases, private keys, government IDs) in the cloud vault.
