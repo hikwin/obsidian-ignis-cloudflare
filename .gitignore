@@ -15,3 +15,10 @@ public/assets/obsidian/*
 assets/obsidian/*
 !assets/obsidian/.gitkeep
 
+# Python 缓存与字节码
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+

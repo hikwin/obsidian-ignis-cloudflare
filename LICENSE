@@ -1,7 +1,76 @@
-IMPORTANT NOTICE:
-1. This project includes modified components derived from Ignis (https://github.com/Nystik-gh/ignis) by Nystik and ignis-php (https://github.com/hikwin/obsidian-ignis-php) by hikwin.
-2. The Cloudflare Workers backend (src/), precompiled single-file bundles (dist/), configuration templates, and front-end adapter patches are licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
-3. This license does NOT apply to the proprietary Obsidian client assets located in the assets/obsidian/ directory, which remain the intellectual property of Dynalist Inc. and are subject to Obsidian's official EULA.
+========================================================================
+IMPORTANT NOTICE & DISCLAIMER
+========================================================================
+
+【English】
+
+1. OBSIDIAN INTELLECTUAL PROPERTY & ASSETS:
+   - "Obsidian" and its logo are trademarks of Dynalist Inc.
+   - All official Obsidian client core assets, binaries, stylesheets, scripts,
+     and language packs (including but not limited to app.js, app.css, starter.js,
+     worker.js, lib/, i18n/, and files located under or downloaded into the
+     assets/obsidian/ directory) are the exclusive intellectual property and
+     copyright of Dynalist Inc. (https://obsidian.md).
+   - The usage and distribution of Obsidian proprietary assets are governed
+     strictly by the official Obsidian End User License Agreement (EULA: https://obsidian.md/eula).
+   - This project is an independent open-source adaptation and is neither
+     affiliated with, endorsed by, nor sponsored by Dynalist Inc.
+
+2. OPEN SOURCE PROJECT DERIVATION & ATTRIBUTION:
+   - This project incorporates and adapts open-source components from:
+     * Ignis (https://github.com/Nystik-gh/ignis) by Nystik-gh
+     * ignis-php (https://github.com/hikwin/obsidian-ignis-php) by hikwin
+   - The original code, serverless bridge logic, build scripts, and adapters
+     remain under their respective open-source licenses.
+
+3. LICENSE APPLICABILITY (AGPL-3.0):
+   - The GNU Affero General Public License v3.0 below applies ONLY to the
+     custom source code created for this project, including:
+     * Cloudflare Workers backend source code (src/)
+     * Precompiled bundle artifacts (dist/)
+     * Build automation and patch scripts (download_assets.py, scripts/)
+     * Custom browser shims and UI adapters (public/assets/shim/, public/assets/ui/)
+     * Deployment configurations (wrangler.toml)
+   - This AGPL-3.0 license does NOT grant any rights to the proprietary Obsidian
+     software or assets.
+
+4. NON-COMMERCIAL USE RESTRICTION:
+   - This project is intended strictly for personal learning, technical research,
+     and self-hosted non-commercial use. Commercial redistribution, resale, or
+     commercial SaaS hosting is strictly prohibited.
+
+------------------------------------------------------------------------
+
+【简体中文】
+
+1. Obsidian 官方知识产权与核心资源声明：
+   - "Obsidian" 及其品牌标志为 Dynalist Inc. 的注册商标。
+   - 所有 Obsidian 官方客户端核心资源、二进制文件、样式与脚本（包括但不限于
+     app.js、app.css、starter.js、worker.js、lib/、i18n/ 以及存放在或通过脚本下载至
+     assets/obsidian/ 目录下的所有文件）的全部知识产权与版权均严格归 Dynalist Inc. 所有。
+   - Obsidian 核心文件的使用与分发须严格遵守官方《最终用户许可协议》（EULA: https://obsidian.md/eula）。
+   - 本项目为独立的开源适配与无服务器移植方案，与 Obsidian 官方（Dynalist Inc.）无任何隶属、合作或背书关系。
+
+2. 开源组件归属与致谢：
+   - 本项目的前端垫片（Shim）、UI 桥接逻辑与无服务器架构设计基于并衍生自以下开源项目：
+     * Ignis (https://github.com/Nystik-gh/ignis) - 作者: Nystik-gh
+     * ignis-php (https://github.com/hikwin/obsidian-ignis-php) - 作者: hikwin
+
+3. 开源许可证适用范围 (AGPL-3.0)：
+   - 以下随附的 GNU Affero General Public License v3.0 (AGPL-3.0) 开源协议仅适用于本项目原创的源码与构建配置，包括：
+     * Cloudflare Workers 服务端业务代码 (src/)
+     * 编译产物与单文件核心 (dist/)
+     * 自动化构建与补丁脚本 (download_assets.py, scripts/)
+     * 前端垫片与 UI 交互增强脚本 (public/assets/shim/, public/assets/ui/)
+     * 项目部署与工程配置文件 (wrangler.toml)
+   - 本开源许可证不适用于任何由官方所有的 Obsidian 专有客户端文件或资产。
+
+4. 非商业用途限制：
+   - 本项目仅供个人学习、技术研究与自托管非商业用途，严禁用于任何商业营利目的、
+     付费分发或商业 SaaS 托管服务。
+
+========================================================================
+
 
 
                     GNU AFFERO GENERAL PUBLIC LICENSE
