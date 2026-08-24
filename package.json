@@ -1,0 +1,30 @@
+{
+  "name": "obsidian-web-cloudflare",
+  "version": "1.0.0",
+  "description": "Obsidian Web Serverless Edition running entirely on Cloudflare Free Tier (Workers + R2 + KV + Assets)",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "tsc --noEmit",
+    "download-assets": "python download_assets.py",
+    "download-assets-node": "node scripts/download-obsidian.mjs"
+  },
+  "keywords": [
+    "obsidian",
+    "cloudflare",
+    "workers",
+    "r2",
+    "serverless"
+  ],
+  "author": "Ignis Contributors",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "hono": "^4.3.11"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^3.57.1"
+  }
+}

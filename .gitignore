@@ -1,0 +1,17 @@
+node_modules/
+.wrangler/
+dist/
+.env
+.dev.vars
+
+# 静态资源备份与临时文件
+.backup_assets*
+.temp_obsidian_*
+*.tmp
+
+# 静态资源目录（忽略内部解包的大体积文件，保留空目录结构）
+public/assets/obsidian/*
+!public/assets/obsidian/.gitkeep
+assets/obsidian/*
+!assets/obsidian/.gitkeep
+

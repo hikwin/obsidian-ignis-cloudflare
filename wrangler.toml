@@ -1,0 +1,33 @@
+name = "obsidian-web"
+main = "src/index.ts"
+compatibility_date = "2024-05-12"
+compatibility_flags = ["nodejs_compat"]
+
+# 绑定 Cloudflare R2 存储桶 (存放 Obsidian 笔记库与附件)
+[[r2_buckets]]
+binding = "VAULT_BUCKET"
+bucket_name = "obsidian-vault"
+
+# 绑定 Cloudflare KV (存放 Session 会话、密码 Hash 与仓库索引)
+# 部署前可通过 wrangler kv namespace create IGNIS_KV 获取具体 id
+[[kv_namespaces]]
+binding = "IGNIS_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# 静态资源自动托管绑定 (Cloudflare Workers Assets)
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# 环境变量配置
+[vars]
+DEFAULT_VAULT_ID = "default"
+DEFAULT_VAULT_NAME = "我的知识库"
+OBSIDIAN_VERSION = "1.8.7"
+COOKIE_NAME = "ignis_cf_token"
+# 默认开启本地代理白名单模式 (可设为 allowlist | all | disabled)
+PROXY_MODE = "all"
+
+# 生产环境 Secrets 提示 (不要直接写在 toml 中，通过 wrangler secret put 设置):
+# ADMIN_PASSWORD = "your-admin-password"
+# JWT_SECRET = "your-random-32-chars-jwt-secret"

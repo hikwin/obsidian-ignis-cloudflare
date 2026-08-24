@@ -1,0 +1,42 @@
+========================================================================
+COPYRIGHT & LICENSE NOTICE / 版权声明与开源许可说明
+========================================================================
+
+【简体中文】
+
+1. Obsidian 官方核心资源版权：
+   存放在 assets/obsidian/ 目录下的所有核心文件（包括但不限于 app.js、app.css、
+   starter.js、worker.js、lib/、i18n/ 等资源）版权与知识产权均严格属于 
+   Obsidian (Dynalist Inc.) 所有，遵循官方最终用户许可协议 (EULA)。
+
+2. 桥接与服务层开源项目归属：
+   本项目的前端适配层 (Shim)、UI 桥接逻辑与无服务器架构基于以下开源项目：
+   - Ignis: https://github.com/Nystik-gh/ignis (作者: Nystik-gh)
+   - ignis-php: https://github.com/hikwin/obsidian-ignis-php (作者: hikwin)
+
+3. 非商业用途声明：
+   本项目仅供个人学习、技术研究与自托管非商业用途，严禁用于任何商业营利目的、
+   付费分发或商业 SaaS 托管服务。
+
+------------------------------------------------------------------------
+
+【English】
+
+1. Obsidian Official Core Assets:
+   All files located under the assets/obsidian/ directory (including but not
+   limited to app.js, app.css, starter.js, worker.js, lib/, i18n/, etc.) are
+   the exclusive property and copyright of Obsidian (Dynalist Inc.), governed
+   by the official Obsidian End User License Agreement (EULA).
+
+2. Open-Source Bridge & Service Attribution:
+   The web runtime shims, UI bridge components, and serverless architecture
+   are derived and adapted from:
+   - Ignis: https://github.com/Nystik-gh/ignis (by Nystik-gh)
+   - ignis-php: https://github.com/hikwin/obsidian-ignis-php (by hikwin)
+
+3. Non-Commercial Restriction:
+   This project is provided solely for personal learning, research, and
+   self-hosted non-commercial use. Commercial exploitation, resale, or
+   commercial SaaS hosting is strictly prohibited.
+
+========================================================================

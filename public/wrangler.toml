@@ -1,0 +1,28 @@
+name = "obsidian-web"
+main = "dist/index.js"
+compatibility_date = "2024-05-12"
+compatibility_flags = ["nodejs_compat"]
+
+# 1. 绑定 Cloudflare R2 存储桶 (存放 Obsidian 笔记库与附件)
+[[r2_buckets]]
+binding = "VAULT_BUCKET"
+bucket_name = "obsidian-vault"
+
+# 2. 绑定 Cloudflare KV (存放 Session 会话、密码 Hash 与配置)
+# 请将下方 YOUR_KV_NAMESPACE_ID 替换为您执行 wrangler kv namespace create IGNIS_KV 之后生成的真实 ID
+[[kv_namespaces]]
+binding = "IGNIS_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# 3. 静态资源自动托管绑定 (Cloudflare Workers Assets)
+[assets]
+directory = "./"
+binding = "ASSETS"
+
+# 4. 环境变量配置
+[vars]
+DEFAULT_VAULT_ID = "default"
+DEFAULT_VAULT_NAME = "我的知识库"
+OBSIDIAN_VERSION = "1.8.7"
+COOKIE_NAME = "ignis_cf_token"
+PROXY_MODE = "all"

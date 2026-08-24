@@ -1,0 +1,2 @@
+# This file preserves the empty directory structure in git.
+# Obsidian core static assets (app.js, app.css, lib/) will be downloaded and extracted here by download_assets.py.
