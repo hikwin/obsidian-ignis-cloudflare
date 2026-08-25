@@ -76,10 +76,10 @@
 
 ## 💡 方案亮点对比
 
-| 对比维度 | 原 PHP 架构 (传统 VPS) | Cloudflare Serverless 架构 (本方案) |
+| 对比维度 | 原 Docker或PHP 架构 (传统 VPS) | Cloudflare Serverless 架构 (本方案) |
 | :--- | :--- | :--- |
 | **服务器费用** | 需要购买 VPS 或虚拟主机（每年数百元） | **永久 0 元**（利用官方终身免费额度） |
-| **运维成本** | 需维护 PHP、Nginx/Apache、SQLite 备份、SSL 续期 | **0 运维**，无服务器停机与证书过期烦恼 |
+| **运维成本** | 需维护容器、PHP运行环境、SSL 续期等 | **0 运维**，无服务器停机与证书过期烦恼 |
 | **访问速度** | 受限于单台 VPS 服务器带宽与地理位置 | **全球 300+ 边缘节点 CDN Anycast 加速** |
 | **数据安全性** | 依赖单机硬盘，需自行配置增量异地备份 | **R2 对象存储 11 个 9 (99.999999999%) 耐用性** |
 | **跨设备访问** | 只要有浏览器即可访问，无需在本地安装客户端 | **随时随地打开网页即可畅快记笔记** |
@@ -215,6 +215,18 @@ This project leverages Cloudflare edge compute and distributed storage products 
 | **Cloudflare R2** | Object storage for notes & images | **10 GB Storage**<br>**1M Class A ops/mo**<br>**10M Class B ops/mo**<br>**$0 Egress fee** | Typical Markdown notes + images < 2GB | 🟢 **Abundant** |
 | **Cloudflare KV / D1** | Auth tokens & vault metadata | **KV: 100K reads/day, 1K writes/day**<br>**D1: 5M reads/day, 100K writes/day** | Only queried on login & vault switching | 🟢 **Abundant** |
 | **Cloudflare Zero Trust** | Optional Enterprise SSO / Tunnel | **Free for up to 50 users** | Only 1 user account needed | 🟢 **100% Free** |
+
+---
+
+## 💡 Solution Highlights Comparison
+
+| Comparison Dimension | Original Docker / PHP Architecture (Traditional VPS) | Cloudflare Serverless Architecture (This Project) |
+| :--- | :--- | :--- |
+| **Server Cost** | Requires renting VPS or cloud host ($50–$100+/year) | **Permanently $0** (Utilizing official free tier) |
+| **Maintenance** | Need to maintain containers, PHP runtime, SSL renewal, etc. | **Zero Maintenance**, no server downtime or expired SSL worries |
+| **Access Speed** | Limited by single VPS bandwidth and server location | **Global 300+ edge nodes Anycast CDN acceleration** |
+| **Data Durability** | Dependent on single disk, manual offsite backups needed | **R2 Object Storage 99.999999999% (11 9s) durability** |
+| **Cross-Device Access** | Access anytime from any modern web browser | **Instant note-taking anywhere with zero client installs** |
 
 ---
 
